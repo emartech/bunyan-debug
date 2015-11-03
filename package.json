@@ -10,7 +10,10 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/emartech/bunyan-debug.git"
-  }
+  },
+  "engines": {
+    "node": ">= 4"
+  },
   "license": "ISC",
   "keywords": ["log", "logging", "debug", "json", "bunyan"],
   "dependencies": {
