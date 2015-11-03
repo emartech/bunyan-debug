@@ -1,0 +1,21 @@
+{
+  "name": "bunyan-debug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "1.5.1",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "chai": "3.3.0",
+    "mocha": "2.3.3",
+    "sinon": "1.17.1",
+    "sinon-chai": "2.8.0"
+  }
+}
