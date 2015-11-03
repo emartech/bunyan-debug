@@ -1,7 +1,7 @@
 # bunyan-debug
 
-Simple wrapper that combines the namespaces of ```debug``` and the machine readable JSON format of ```bunyan```.
-Has the same logging levels and child creation as ```bunyan```.
+Simple wrapper that combines the namespaces of [debug](https://github.com/visionmedia/debug) and the machine readable JSON format of [bunyan](https://github.com/trentm/node-bunyan).
+Has the same logging levels and child creation as [bunyan](https://github.com/trentm/node-bunyan).
 
 ### Example
 

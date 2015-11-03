@@ -1,13 +1,18 @@
 {
   "name": "bunyan-debug",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bunyan logger with node debug style namespaces",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.spec.js"
   },
-  "author": "",
+  "author": "Emartech",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/emartech/bunyan-debug.git"
+  }
   "license": "ISC",
+  "keywords": ["log", "logging", "debug", "json", "bunyan"],
   "dependencies": {
     "bunyan": "1.5.1",
     "lodash": "3.10.1"
