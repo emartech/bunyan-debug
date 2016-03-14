@@ -1,6 +1,6 @@
 {
   "name": "bunyan-debug",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Bunyan powered logger with namespaces",
   "main": "index.js",
   "scripts": {
