@@ -1,10 +1,13 @@
 {
   "name": "bunyan-debug",
-  "version": "1.0.0",
-  "description": "Bunyan logger with node debug style namespaces",
+  "version": "1.1.0",
+  "description": "Bunyan powered logger with namespaces",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.spec.js"
+  },
+  "bin": {
+    "bunyan-debug": "./bin/beautify"
   },
   "author": "Emartech",
   "repository": {
@@ -15,15 +18,29 @@
     "node": ">= 4"
   },
   "license": "ISC",
-  "keywords": ["log", "logging", "debug", "json", "bunyan"],
+  "keywords": [
+    "log",
+    "logging",
+    "debug",
+    "json",
+    "bunyan"
+  ],
   "dependencies": {
-    "bunyan": "1.5.1",
-    "lodash": "3.10.1"
+    "ansi-256-colors": "1.1.0",
+    "bunyan": "1.7.1",
+    "chalk": "1.1.1",
+    "co": "4.6.0",
+    "event-stream": "3.3.2",
+    "is-function": "1.0.1",
+    "is-generator": "1.0.2",
+    "is-promise": "2.1.0",
+    "lodash": "4.6.1"
   },
   "devDependencies": {
-    "chai": "3.4.0",
-    "mocha": "2.3.3",
-    "sinon": "1.17.2",
+    "chai": "3.5.0",
+    "es6-promisify": "3.0.0",
+    "mocha": "2.4.5",
+    "sinon": "1.17.3",
     "sinon-chai": "2.8.0"
   }
 }
