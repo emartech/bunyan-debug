@@ -10,9 +10,14 @@ module.exports = function(line) {
     try {
       let data = JSON.parse(line);
 
-      transformedLine = stringifyLevel(data.level) + ' ' + colorName(data.name) + ' ' + formatTime.elapsedTime(data.time) + ' ';
+      if (data.hasOwnProperty('name') && data.hasOwnProperty('name')) {
+        transformedLine = stringifyLevel(data.level) + ' ' + colorName(data.name) + ' ' + formatTime.elapsedTime(data.time) + ' ';
 
-      transformedLine += formatBody(data);
+        transformedLine += formatBody(data);
+      }
+      else {
+        transformedLine = line;
+      }
     }
     catch (e) {
       transformedLine = line;

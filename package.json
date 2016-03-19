@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "ansi-256-colors": "1.1.0",
-    "bunyan": "1.7.1",
+    "bunyan": "1.8.0",
     "chalk": "1.1.1",
     "co": "4.6.0",
     "event-stream": "3.3.2",

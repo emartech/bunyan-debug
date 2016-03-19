@@ -63,3 +63,6 @@ fileLogger.elapsedTime(
   },
   { action: 'numbers' }
 );
+
+// displays as is
+console.log(JSON.stringify({ example: 'output' }));
