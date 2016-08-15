@@ -1,6 +1,5 @@
 'use strict';
 let Logger = require('./logger');
-let bunyan = require('bunyan');
 
 describe('Logger', function() {
   let logger;
