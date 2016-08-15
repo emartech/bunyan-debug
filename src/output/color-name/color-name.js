@@ -14,4 +14,5 @@ module.exports = function colorName(name) {
   let color = colors[names[name].color];
   return chalk[color](name);
 };
+
 module.exports.colors = colors;

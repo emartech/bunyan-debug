@@ -1,5 +1,5 @@
 'use strict';
-let formatBody = require('../bin/format_body');
+let formatBody = require('./format-body');
 
 describe('formatBody', function() {
   it('should order and stringify keys', function() {

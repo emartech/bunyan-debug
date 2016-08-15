@@ -1,5 +1,5 @@
 'use strict';
-let isNamespaceEnabled = require('../src/enabled');
+let isNamespaceEnabled = require('./enabled');
 
 describe('isNamespaceAvailable', function() {
   it('should enable when variables only contain one', function() {
@@ -41,5 +41,11 @@ describe('isNamespaceAvailable', function() {
     expect(isNamespaceEnabled(
       '', ''
     )).to.eql(false);
+  });
+
+  it('should enable everything for star', function() {
+    expect(isNamespaceEnabled(
+      '*', 'mongo'
+    )).to.eql(true);
   });
 });

@@ -1,6 +1,6 @@
 'use strict';
 let logFactory = require('../index');
-let Logger = require('../src/logger');
+let Logger = require('./logger/logger');
 
 describe('LogFactory', function() {
   beforeEach(function() {

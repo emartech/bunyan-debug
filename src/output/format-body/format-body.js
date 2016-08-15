@@ -8,6 +8,7 @@ module.exports = function(logBody) {
   delete log.v;
   delete log.pid;
   delete log.hostname;
+  delete log.time;
 
   if (!log.msg) {
     delete log.msg;

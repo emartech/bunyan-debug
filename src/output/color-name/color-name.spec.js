@@ -1,6 +1,6 @@
 'use strict';
 
-let colorName = require('../bin/color_name');
+let colorName = require('./color-name');
 
 describe('colorName', function() {
   it('should pick the first color for the name', function() {

@@ -1,3 +1,4 @@
 test
+*.spec.js
 node_modules
 .idea
