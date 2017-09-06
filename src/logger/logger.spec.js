@@ -1,5 +1,6 @@
 'use strict';
 let Logger = require('./logger');
+const continuationLocalStorage = require('continuation-local-storage');
 
 describe('Logger', function() {
   let logger;
@@ -17,6 +18,18 @@ describe('Logger', function() {
     expect(logArguments.action).to.eql('wedidit');
     expect(logArguments.level).to.eql(30);
     expect(logArguments.details).to.eql('forever');
+  });
+
+  it('should log prequest id if there is namespace present', function() {
+    let namespace = continuationLocalStorage
+      .createNamespace('session');
+
+    namespace.run(function(){
+      namespace.set('request_id', 'uid');
+      logger.info('wedidit');
+      let logArguments = JSON.parse(console.log.args[0]);
+      expect(logArguments.request_id).to.eql('uid');
+    });
   });
 
   it('should not call log info method when disabled', function() {

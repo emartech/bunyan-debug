@@ -1,12 +1,17 @@
 'use strict';
 
 let config = require('../config');
+const continuationLocalStorage = require('continuation-local-storage');
+
 
 let logMethodFactory = function(level) {
   return function(action, data) {
     if (!this.enabled) {
       return;
     }
+
+    const namespace = continuationLocalStorage.getNamespace('session');
+    const storage = namespace ? { request_id : namespace.get('request_id') }: {};
 
     console.log(JSON.stringify(Object.assign(
       {
@@ -15,6 +20,7 @@ let logMethodFactory = function(level) {
         level: config.levels[level].number,
         time: new Date().toISOString()
       },
+      storage,
       data
     )));
   }
@@ -26,14 +32,12 @@ class Logger {
     this.enabled = enabled;
   }
 
-  fromError(action, error, options) {
-    let opts = options || {};
-
+  fromError(action, error, options = {}) {
     this.error(action, Object.assign({
       error_name: error.name,
       error_stack: error.stack,
       error_message: error.message
-    }, opts));
+    }, options));
   }
 }
 

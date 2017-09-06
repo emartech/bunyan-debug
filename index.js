@@ -1,7 +1,9 @@
 'use strict';
-let Logger = require('./src/logger/logger');
-let Timer = require('./src/timer/timer');
-let isNamespaceEnabled = require('./src/enabled/enabled');
+
+const Logger = require('./src/logger/logger');
+const Timer = require('./src/timer/timer');
+const isNamespaceEnabled = require('./src/enabled/enabled');
+const contextMiddlewareFactory = require('./src/context-middleware-factory/context-middleware-factory');
 
 /**
  * @param namespace
@@ -19,5 +21,6 @@ logFactory.Timer = Timer;
 logFactory.getNamespaces = function() {
   return process.env.DEBUG || '';
 };
+logFactory.getMiddleware = contextMiddlewareFactory.getMiddleware;
 
 module.exports = logFactory;
