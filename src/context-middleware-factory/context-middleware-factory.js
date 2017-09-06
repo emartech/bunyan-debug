@@ -4,7 +4,7 @@ const continuationLocalStorage = require('continuation-local-storage');
 
 class ContextMiddlewareFactory {
   static getMiddleware() {
-    return async function(next, ctx) {
+    return async function(ctx, next) {
       const namespace = continuationLocalStorage.createNamespace('session');
 
       try{
